@@ -1,0 +1,75 @@
+
+.root{
+    -fx-background-color: cadetblue;
+}
+
+.label{
+    -fx-font-size: 12px;
+    -fx-font-style: normal;
+    -fx-text-fill: #000000;
+}
+
+.button {
+    -fx-font-size: 10px;
+    -fx-font-style: normal;
+    -fx-text-fill: #000000;
+}
+Button {
+    -fx-background-color:
+            linear-gradient(#f2f2f2, #d6d6d6),
+            linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+            linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-alignment: center;
+}
+Button:visited
+{
+    -fx-background-color:
+            linear-gradient(#7d7d7d, #858585),
+            linear-gradient(#b8b8b8 0%, #d9d9d9 20%, #aeaeae 100%),
+            linear-gradient(#dddddd 0%, #888888 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+Button:hover{
+    -fx-background-color:
+            linear-gradient(#b0b0b0, #393939),
+            linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+            linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0, 0, 0, 0.6), 6, 0.0 , 0 , 1 );
+}
+
+.text-area {
+    -fx-font-family: "BN Machine";
+    -fx-background-color: rgba(53,89,119,0.4);
+    -fx-text-fill: #fdfffb;
+    -fx-font-size: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.98), 10,0,0,1 );
+    -fx-font-smoothing-type: gray;
+    -fx-font-weight: bold;
+
+    -fx-stroke: black ;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+

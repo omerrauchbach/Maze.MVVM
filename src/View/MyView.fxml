@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import View.MazeDisplayer?>
+
+<!--
+xmlns="http://javafx.com/javafx/10.0.1"
+-->
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="449.0" minWidth="677.0" onKeyPressed="#KeyEventHandler" prefHeight="449.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8.0.121"  xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" layoutY="-1.0">
+         <top>
+            <MenuBar prefHeight="25.0" prefWidth="672.0" BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem fx:id="file_new" mnemonicParsing="false" onAction="#startMaze" text="New Game" />
+                        <MenuItem fx:id="file_save" mnemonicParsing="false" onAction="#saveMaze" text="Save" />
+                        <MenuItem fx:id="file_load" mnemonicParsing="false" onAction="#loadMaze" text="Load" />
+                        <MenuItem fx:id="file_exit" mnemonicParsing="false" onAction="#exit" text="Exit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Settings">
+                     <items>
+                        <MenuItem fx:id="settings_control" mnemonicParsing="false" onAction="#controls" text="Controls" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem fx:id="help_about" mnemonicParsing="false" onAction="#about" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <MazeDisplayer fx:id="mazeDisplayer" height="350" onMouseDragged="#MouseEventHandler" onMouseClicked="#MouseEventHandler" onScroll="#zoom"
+                           imageForStart="./src/resources/Images/START1.jpg" imageForGoal="./src/resources/Images/DONUT.png"
+                           imageForPlayer="./src/resources/Images/FACE2.png" imageForWall="./src/resources/Images/shrub3.png"
+                           width="350" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <HBox prefHeight="0.0" prefWidth="672.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lbl_status" prefHeight="17.0" prefWidth="175.0" text="Status:" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </bottom>
+         <left>
+            <FlowPane prefHeight="411.0" prefWidth="120.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lbl_mazeColumn22" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn" prefHeight="17.0" prefWidth="142.0" text="   Enter Dimensions:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="lbl_mazeColumn1" prefHeight="17.0" prefWidth="177.0" text="   Row:    Column:" />
+                  <Label fx:id="lbl_mazeColumn23" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn21121" prefHeight="17.0" prefWidth="10.0" />
+                  <TextField fx:id="textField_RowNumber" alignment="TOP_CENTER" disable="false" maxWidth="100.0" prefHeight="25.0" prefWidth="40.0" text="10" />
+                  <Label fx:id="lbl_mazeColumn2111" prefHeight="17.0" prefWidth="9.0" />
+                  <TextField fx:id="textField_ColNumber" alignment="TOP_CENTER" disable="false" maxWidth="100.0" prefHeight="25.0" prefWidth="40.0" text="10" />
+                  <Label fx:id="lbl_mazeColumn2111121" prefHeight="17.0" prefWidth="178.0" />
+                  <Label fx:id="lbl_mazeColumn211112211" prefHeight="17.0" prefWidth="9.0" />
+                  <Button fx:id="btn_start" mnemonicParsing="false" onAction="#startMaze" prefHeight="25.0" prefWidth="103.0" text="Start" textAlignment="JUSTIFY" />
+                  <Label fx:id="lbl_mazeColumn211" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_currPos" text="   Current Position:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="lbl_mazeColumn21" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn211211" prefHeight="17.0" prefWidth="10.0" />
+                  <Label fx:id="lbl_PosRowNumber" prefHeight="17.0" prefWidth="37.0" />
+                  <Label fx:id="lbl_mazeColumn2112111" prefHeight="17.0" prefWidth="10.0" />
+                  <Label fx:id="lbl_PosColNumber" prefHeight="17.0" prefWidth="37.0" />
+                  <Label fx:id="lbl_mazeColumn2114" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn2111122111" prefHeight="17.0" prefWidth="9.0" />
+                  <Button fx:id="btn_controls" mnemonicParsing="false" onAction="#controls" prefHeight="25.0" prefWidth="103.0" text="Controls" textAlignment="JUSTIFY" />
+                  <Label fx:id="lbl_mazeColumn21141" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn21142" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn2111122112" prefHeight="17.0" prefWidth="9.0" />
+                  <Button fx:id="btn_clear" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="103.0" text="Clear" textAlignment="JUSTIFY" />
+                  <Label fx:id="lbl_mazeColumn2112" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn211411" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn2111122113" prefHeight="17.0" prefWidth="9.0" />
+                  <Button fx:id="btn_solution" mnemonicParsing="false" onAction="#gaveUp" prefHeight="25.0" prefWidth="99.0" text="I Give Up" textAlignment="CENTER" />
+                  <Label fx:id="lbl_mazeColumn21122" prefHeight="17.0" prefWidth="175.0" />
+                  <Label fx:id="lbl_mazeColumn2111122114" prefHeight="17.0" prefWidth="34.0" />
+                  <CheckBox fx:id="check_mute" mnemonicParsing="false" onAction="#mute" prefHeight="17.0" prefWidth="57.0" text="Mute" textAlignment="CENTER" />
+               </children>
+            </FlowPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

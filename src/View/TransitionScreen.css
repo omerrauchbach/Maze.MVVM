@@ -1,0 +1,35 @@
+.root {
+    -fx-background-image: url("../resources/Images/GIF1.gif");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-text-fill: white;
+}
+
+.label{
+    -fx-text-fill: gold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+
+Button:hover{
+    -fx-background-color:
+            linear-gradient(#ff7f50, #6a5acd),
+            linear-gradient(#fcfcfc 0%, #ff7f50 20%, #6a5a80 60%),
+            linear-gradient(#ff7f90 0%, #6a5acd 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: gold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+Button {
+    -fx-background-color:
+            linear-gradient(#ff7f50, #6a5acd),
+            linear-gradient(#fcfcfc 0%, #ff7f50 20%, #d6d6d6 60%),
+            linear-gradient(#dddddd 0%, #6a5acd 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: gold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-alignment: center;
+}

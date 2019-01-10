@@ -1,0 +1,76 @@
+.root{
+    -fx-background-image: url("../resources/Images/BG5.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-text-fill: gold;
+    -fx-padding: 0 0 0 0;
+}
+
+.label{
+    -fx-text-fill: gold;
+}
+
+Button:hover{
+    -fx-background-color:
+            linear-gradient(#ff7f50, #6a5acd),
+            linear-gradient(#fcfcfc 0%, #ff7f50 20%, #6a5a80 60%),
+            linear-gradient(#ff7f90 0%, #6a5acd 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: gold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+Button {
+    -fx-background-color:
+            linear-gradient(#ff7f50, #6a5acd),
+            linear-gradient(#fcfcfc 0%, #ff7f50 20%, #d6d6d6 60%),
+            linear-gradient(#dddddd 0%, #6a5acd 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: gold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-alignment: center;
+    -fx-font-weight: bold;
+}
+
+#lbl_status, #lbl_mazeColumn, #lbl_mazeColumn1, #lbl_currPos, #lbl_mazeColumn211, #lbl_PosRowNumber, #lbl_PosColNumber
+{
+    -fx-text-fill: gold;
+}
+
+.check-box {
+    -fx-text-fill: gold;
+}
+
+.check-box:selected > .box {
+    /* background color for selected checkbox */
+    -fx-background-color: gray;
+}
+
+.check-box > .box {
+    /* background color of unselected checkbox */
+    -fx-background-color: orange;
+}
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    /* modify mark color */
+    -fx-background-color: gold;
+}
+
+
+MenuBar {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: gold;
+    -fx-border-color: #063362;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-font-weight: bold;
+}
+
+.menu-item{
+    -fx-text-fill: gold;
+}
